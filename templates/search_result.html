@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+
+<div>
+  {% if results %} {% for blog in results %}
+
+  <div>
+    <h3>{{ blog.title }}</h3>
+    <p>{{ blog.category.name }}</p>
+    <p>{{ blog.content}}</p>
+  </div>
+  {% endfor %} {% else %}
+  <p>No results found for your search.</p>
+  {% endif %}
+</div>
+
+{% endblock content %}
